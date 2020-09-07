@@ -4,13 +4,22 @@
 using namespace std;
 //globalna tablica dla tej funkcji
 char znaki[100][100];
+string znak;
 
 void line(int x1, int y1, int x2, int y2){
   // powiedzmy, ze punkty to (0,0) i (3,3), przekątna wtedy wynosi 3, i zamalowane są 3 znaki
-  int przekatna = sqrt((x2-x1)*(x2-x1)+(y2-y1)(y2-y1));
-  for(int i)
-  if(przekatna/(x2-x1){
-
+  float x, y;
+  for(int j=0; j<=y2; j++){
+    for(int i=0; i<=x2; i++){
+       x= (x2/y2)*j;
+       y= (y2/x2)*i;
+       if((j<=y && y<=(j+1)) || (i<=x && x<=(i+1))
+          znaki[i][j]=' ';
+       else if((j<=y && y<=(j+1)) || (i<=x && x<=(i+1)))
+          znaki[i][j]=znak[0];
+       else
+          znaki[i][j]=' ';
+    }
   }
 }
 
@@ -19,7 +28,6 @@ int main()
     while(true)
     {
       int stop, menu, a, b;
-      string znak;
 
       cout << "Welcome in shape generator choose your figure\n";
       cout << "1. Square\n";
@@ -29,7 +37,7 @@ int main()
       cin >> menu;
       switch(menu){
 case 1:
-        while(statement)
+        while(1)
         {
           cout << "Choose your one ASCII character:\n";
           cin >> znak;
@@ -50,7 +58,7 @@ case 1:
 
 
 case 2:
-        while(statement)
+        while(1)
         {
           cout << "Choose your one ASCII character:\n";
           cin >> znak;
@@ -63,12 +71,13 @@ case 2:
         cin >> a;
         cout << "Type base: ";
         cin >> b;
-        float h = sqrt(a*a+b*b);
-        char[][]
-        for (int i = 0; i < ; ) {
-          /* code */
-        }
 
+        line(0,0,a,b);
+        for (int i = 0; i<a; i++){
+          for (int j = 0; j<b; j++)
+            cout << znaki[j][i] << ' ';
+          cout << '\n';
+        }
 
 
         break;
@@ -76,7 +85,7 @@ case 2:
 
 
 case 3:
-        while(statement)
+        while(1)
         {
           cout << "Choose your one ASCII character:\n";
           cin >> znak;
@@ -97,7 +106,7 @@ case 3:
 
 
 default:
-
+          cout << "lol";
           break;
       }
 
